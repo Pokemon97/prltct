@@ -20,6 +20,11 @@ Route::get('index', [
 	'as'=>'trang-chu',
 	'uses'=>'PageController@getIndex'
 ]);
+Route::get('productInfo/{id}', [
+	'as'=>'product',
+	'uses'=>'PageController@getProduct'
+]);
+
 
 Route:: group(['prefix'=>'admin'], function() {
 	
