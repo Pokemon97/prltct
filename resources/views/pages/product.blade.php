@@ -12,6 +12,7 @@
                     <p class="single-item-title"><h2>{{$product->name}}</h2></p>
                     <br/>
                     <p class="single-item-price">
+                        <span>Giá:</span>
                         @if($product->promotion_price != 0)
                             <span class="flash-del">{{$product->unit_price}}đ</span>
                             <span class="flash-sale">{{$product->promotion_price}}đ</span>

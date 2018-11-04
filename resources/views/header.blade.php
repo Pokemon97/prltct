@@ -50,7 +50,7 @@
 					<li><a>Loại sản phẩm</a>
 						<ul class="sub-menu">
 							@foreach($typePro as $type)
-							<li><a href=""><b style="color: black">{{$type->name}}</b></a></li>
+							<li><a href="{{route('productType', $type->id)}}"><b style="color: black">{{$type->name}}</b></a></li>
 							@endforeach
 						</ul>
 					</li>

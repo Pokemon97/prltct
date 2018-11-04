@@ -28,6 +28,10 @@ Route::get('search', [
 	'as'=>'search',
 	'uses'=>'PageController@getSearch'
 ]);
+Route::get('productType/{type}', [
+	'as'=>'productType',
+	'uses'=>'PageController@getProductType'
+]);
 
 
 Route:: group(['prefix'=>'admin'], function() {
