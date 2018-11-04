@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 //trang admin
 Route::get('index', [
-	'as'=>'trang-chu',
+	'as'=>'home-page',
 	'uses'=>'PageController@getIndex'
 ]);
 Route::get('productInfo/{id}', [
