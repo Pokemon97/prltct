@@ -21,4 +21,9 @@ class PageController extends Controller
     	$product = Product::where('name','like','%'.$req->key.'%')->get();
     	return view('pages.search', compact('product'));
     }
+
+    public function getDanhsach(){
+        $product = Product::where('name','like','%'.$req->key.'%')->get();
+        return view('pages.danhsach', compact('product'));
+    }
 }

@@ -29,6 +29,11 @@ Route::get('search', [
 	'uses'=>'PageController@getSearch'
 ]);
 
+Route::get('danhsach/{id}',[
+     'as'=>'danhsach', 
+	'user'=>'PageController@getDanhsach']);
+
+
 
 Route:: group(['prefix'=>'admin'], function() {
 	
