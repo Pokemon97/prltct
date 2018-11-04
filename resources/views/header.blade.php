@@ -23,7 +23,7 @@
 			<div class="pull-right beta-components space-left ov">
 				<div class="space10">&nbsp;</div>
 				<div class="beta-comp">
-					<form role="search" method="get" id="searchform" action="{{route('home-page')}}">
+					<form role="search" method="get" id="searchform" action="{{route('search')}}">
 				        <b style="font-size: 115%; color: red" ><input type="text" value="" name="key" id="s" placeholder="Nhập từ khóa..." /></b>
 				        <button class="fa fa-search" type="submit" id="searchsubmit"></button>
 					</form>

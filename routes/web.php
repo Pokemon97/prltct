@@ -21,8 +21,12 @@ Route::get('index', [
 	'uses'=>'PageController@getIndex'
 ]);
 Route::get('productInfo/{id}', [
-	'as'=>'product',
+	'as'=>'productDetail',
 	'uses'=>'PageController@getProduct'
+]);
+Route::get('search', [
+	'as'=>'search',
+	'uses'=>'PageController@getSearch'
 ]);
 
 
