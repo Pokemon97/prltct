@@ -19,7 +19,8 @@ class PageController extends Controller
     }
 
     public function getSearch(Request $req){
-    	$product = Product::where('name','like','%'.$req->key.'%')->orWhere('unit_price','like',$req->key)->get();
+    	if($req->key == '') $product = [];
+    	else $product = Product::where('name','like','%'.$req->key.'%')->orWhere('unit_price','like',$req->key)->get();
     	return view('pages.search', compact('product'));
     }
 
