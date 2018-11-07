@@ -31,6 +31,24 @@
                             </div>
                         @endif
 
+                        @if(session('loi_quantity'))
+                            <div class="alert alert-danger">
+                                {{session('loi_quantity')}}
+                            </div>
+                        @endif
+
+                        @if(session('loi_unit'))
+                            <div class="alert alert-danger">
+                                {{session('loi_unit')}}
+                            </div>
+                        @endif
+
+                        @if(session('loi_promotion'))
+                            <div class="alert alert-danger">
+                                {{session('loi_promotion')}}
+                            </div>
+                        @endif
+
                         <form action="admin/sanpham/sua/{{$sanpham->id}}" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="_token" value="{{csrf_token()}}" />
 
@@ -60,6 +78,16 @@
                             <div class="form-group">
                                 <label>Giá Khuyến Mãi</label>
                                 <input type="number" class="form-control" name="promotion_price" placeholder="Nhập giá khuyến mãi" value="{{$sanpham->promotion_price}}" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nhãn hiệu</label>
+                                <input class="form-control" name="maker" placeholder="Nhập tên nhãn hiệu" value="{{$sanpham->maker}}" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Số lượng</label>
+                                <input type="number" class="form-control" name="quantity" placeholder="Nhập số lượng" value="{{$sanpham->quantity}}" />
                             </div>
 
                             <div class="form-group">

@@ -21,6 +21,8 @@
                                 <th>ID</th>
                                 <th>Tên</th>
                                 <th>Thể Loại</th>
+                                <th>Nhãn hiệu</th>
+                                <th>Số lượng</th>
                                 <th>Mô Tả</th>
                                 <th>Giá Gốc</th>
                                 <th>Giá Khuyến Mãi</th>
@@ -38,6 +40,8 @@
                                         <p>{{$sp->name}}</p>
                                     </td>
                                     <td>{{$sp->productType->name}}</td>
+                                    <td>{{$sp->maker}}</td>
+                                    <td>{{$sp->quantity}}</td>
                                     <td>{!!$sp->description!!}</td>
                                     <td>{{$sp->unit_price}}</td>
                                     <td>{{$sp->promotion_price}}</td>

@@ -13,11 +13,11 @@ class TheLoaiController extends Controller
 
     public function getDanhSach() {
         $theloai = ProductType::get();
-    	return view('admin.theloai.danhsach', ['theloai'=>$theloai]);
+        return view('admin.theloai.danhsach', ['theloai'=>$theloai]);
     }
 
     public function getThem() {
-    	return view('admin.theloai.them');
+        return view('admin.theloai.them');
     }
 
     public function postThem(Request $request) {
@@ -64,7 +64,7 @@ class TheLoaiController extends Controller
     }
 
     public function getSua($id) {
-    	$theloai = ProductType::find($id);
+        $theloai = ProductType::find($id);
         return view('admin.theloai.sua', ['theloai'=>$theloai]);
     }
 
@@ -116,23 +116,14 @@ class TheLoaiController extends Controller
         $theloai = ProductType::find($id);
 
         if($theloai->product){
-        	foreach ($theloai->product as $sp) {
-                if($sp->billDetail)
-                {
-                    $chitiet = $sp->billDetail;
-                    foreach ($chitiet as $ct) {
-                        $ct->delete();
-                    }
+            foreach ($theloai->product as $sp) {
                     $sp->delete();
-                }
-                else
-                    $sp->delete();
-        	}
-        	$theloai->delete();
-        	
+            }
+            $theloai->delete();
+            
         }
         else{
-        	$theloai->delete();
+            $theloai->delete();
         }
         
         return redirect('admin/theloai/danhsach')->with('thongbao', 'Xóa thành công.');

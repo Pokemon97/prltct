@@ -23,8 +23,15 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="space20">&nbsp;</div>
+                <div style="padding-bottom: 20px; font-size: 20px">
+                    @if($product->quantity > 0)
+                        <span style="color: green">Còn hàng</span>
+                    @else
+                        <span style="color: red">Hết hàng</span>
+                    @endif
+                </div>
                 <div class="single-item-desc">
-                    <span style="font-size: 16px">Mô tả:</span><span style="font-size: 16px">{!!$product->description!!}</span>
+                    <span style="font-size: 20px">Mô tả:</span><span style="font-size: 16px">{!!$product->description!!}</span>
                 </div>
             </div>
         </div>
